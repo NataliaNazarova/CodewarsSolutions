@@ -1,1 +1,1 @@
-# CodewrsSolutions Saved solutions of Codewars Challanges
+# CodewarsSolutions Saved solutions of Codewars Challanges
