@@ -1,0 +1,8 @@
+// Testing, Testing! Return and concatenate a string.
+// https://www.codewars.com/kata/5977387e131c07082b000098/train/javascript
+function getRes(myScore) {
+  let str1 = "Congratulations, you have passed!";
+  let str2 = "Sorry, you have failed. Better luck next time!";
+  let str3 = "Thank you for taking part.";
+  return myScore >= 70 ? str1 + ' ' + str3: str2 + ' ' + str3;
+}
