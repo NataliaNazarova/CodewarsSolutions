@@ -1,0 +1,11 @@
+// Powers of 3
+// https://www.codewars.com/kata/57be674b93687de78c0001d9/train/javascript
+function largestPower(n){
+let i = -1;
+let k = -1;
+  while ((3 ** i) < n){
+    k = i;
+    i++;
+  }
+  return k;
+}
