@@ -1,0 +1,17 @@
+//ATM
+//  https://www.codewars.com/kata/5635e7cb49adc7b54500001c/train/javascript
+function solve(n) {
+  let arr = [500, 200, 100, 50, 20, 10]
+  let res = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (n % 10 === 0){
+      if (n >= arr[i]) {
+        let res1 = Math.floor(n / arr[i]);
+        n = n - res1 * arr[i];
+        res = res + res1;
+      } else continue;
+    } else break;
+    
+  } 
+  return res === 0 ? -1: res;
+}
