@@ -1,0 +1,14 @@
+// Tortoise racing
+// https://www.codewars.com/kata/55e2adece53b4cdcb900006c/train/javascript
+function race(v1, v2, g) {
+  let arr = [];
+  if (v1 >= v2) return null;
+  else {
+    let timeHour = g / (v2 - v1);
+    let timeSec = timeHour * 3600;
+    arr.push(Math.trunc(timeHour));
+    arr.push(Math.trunc((timeSec - arr[0] * 3600) / 60));
+    arr.push(Math.trunc(timeSec - arr[0] * 3600 - arr[1] * 60));
+  }
+  return arr;
+}
