@@ -1,0 +1,11 @@
+// Minimum to multiple
+// https://www.codewars.com/kata/5e030f77cec18900322c535d/train/javascript
+function minimum(a, x) {
+  console.log(a, x);
+  if (a >= x){
+    if (a / x > 1) return Math.min(a - Math.floor(a / x) * x, Math.ceil(a / x) * x - a);
+    else return 0;
+  }
+  console.log(a, x);
+  return Math.min(a, x - a);
+}
