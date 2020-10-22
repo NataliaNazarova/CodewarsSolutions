@@ -1,0 +1,10 @@
+// Simple consecutive pairs
+// https://www.codewars.com/kata/5a3e1319b6486ac96f000049/train/javascript
+function pairs(ar){
+  let count = 0;
+  let p = Math.floor(ar.length / 2) * 2;
+  for (let i = 0; i < p - 1; i+=2) {
+    if(ar[i] + 1 === ar[i + 1] || ar[i] === ar[i + 1] + 1) count++;
+  }
+  return count;
+}
