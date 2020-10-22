@@ -1,0 +1,10 @@
+// Total amount of points
+// https://www.codewars.com/kata/5bb904724c47249b10000131/train/javascript
+function points(games) {
+  let p = 0;
+  for (let el of games){
+    if (el[0] > el[2]) p+=3;
+    if (el[0] === el[2]) p+=1;
+  }
+  return p;
+}
