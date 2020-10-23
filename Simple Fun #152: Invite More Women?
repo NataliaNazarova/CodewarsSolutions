@@ -1,0 +1,11 @@
+// Simple Fun #152: Invite More Women?
+https://www.codewars.com/kata/58acfe4ae0201e1708000075/train/javascript
+function inviteMoreWomen(L) {
+  let sPoz = 0;
+  let sNeg = 0;
+  for (let el of L) {
+    if (el > 0) sPoz = sPoz + el;
+    if (el < 0) sNeg = sNeg + el;
+  }
+  return Math.abs(sNeg) < sPoz;
+}
