@@ -1,0 +1,26 @@
+// Find the middle element
+// https://www.codewars.com/kata/545a4c5a61aa4c6916000755/train/javascript
+let gimme = function (arr) {
+  let min = arr[0];
+  let max = arr[0];
+  let indMax = 0;
+  let indMin = 0;
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < min){
+      min = arr[i];
+      indMin = i;
+    }
+    if (arr[i] > max) {
+      max = arr[i];
+      indMax = i;
+    }
+  }
+  let midl = 0;
+  console.log (indMin, indMax)
+  for (let i = 1; i < arr.length; i++) {
+    if (i !== indMin && i !== indMax) {
+      midl = i;
+    }
+  }
+  return midl;
+}
