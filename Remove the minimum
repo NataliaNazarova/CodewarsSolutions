@@ -1,0 +1,17 @@
+// Remove the minimum
+// https://www.codewars.com/kata/563cf89eb4747c5fb100001b/train/javascript
+function removeSmallest(numbers) {
+  let arr = [];
+  let min = numbers[0];
+  let indMin = 0;
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] < min) {
+      min = numbers[i]; 
+      indMin = i;
+    }
+  }
+  for (let i = 0; i < numbers.length; i++){
+    if ( i !== indMin) arr.push(numbers[i]);
+  }
+  return arr;
+}
