@@ -1,0 +1,34 @@
+// String doubles
+// https://www.codewars.com/kata/5a145ab08ba9148dd6000094/train/javascript
+function rd(s) {
+  let str = '';
+  for (let i = 0; i < s.length; i++){
+    if (s[i] === s[i+1]) {
+      i++;
+      continue;
+    } else {
+      str += s[i];
+    }
+  }
+  return str;
+}
+function doubles(s){
+  while(s !== rd(s)){
+    s = rd(s);
+  }
+  return s
+}
+
+
+
+function doubles(s){
+  let arr = [];
+  for (let i = 0; i < s.length; i++){
+    if (arr.length === 0 || s[i] !== arr[arr.length - 1]){
+      arr.push(s[i]);
+    } else {
+      arr.pop();
+    }
+  }
+  return arr.join('');
+}
