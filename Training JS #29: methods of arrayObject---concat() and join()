@@ -1,0 +1,7 @@
+// Training JS #29: methods of arrayObject---concat() and join()
+//  https://www.codewars.com/kata/5731861d05d14d6f50000626/train/javascript
+function bigToSmall(arr){
+  let res = [].concat(...arr)
+  res = res.sort((a, b) => b - a)
+  return res.join('>');
+}
