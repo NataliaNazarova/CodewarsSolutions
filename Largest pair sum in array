@@ -1,0 +1,6 @@
+// Largest pair sum in array
+// https://www.codewars.com/kata/556196a6091a7e7f58000018/train/javascript
+function largestPairSum(n) {
+  n.sort((a, b) => b - a);
+  return n[0] + n[1];
+}
