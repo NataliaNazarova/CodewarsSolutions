@@ -1,0 +1,12 @@
+// Minimum Steps (Array Series #6)
+// https://github.com/NataliaNazarova/CodewrsSolutions/new/master
+function minimumSteps(numbers, value){
+  numbers.sort((a, b) => a - b);
+  let i = 0;
+  let s = numbers[0];
+  while (s < value) {
+    i++;
+    s = s + numbers[i];
+  }
+  return i;
+}
