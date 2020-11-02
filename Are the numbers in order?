@@ -6,3 +6,7 @@ function inAscOrder(arr) {
   }
   return true;
 }
+
+function inAscOrder(arr) {
+  return arr.every((el, i) => !i || el > arr[i - 1]);
+}
