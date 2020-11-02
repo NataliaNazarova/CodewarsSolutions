@@ -1,0 +1,6 @@
+// Character Counter
+// https://www.codewars.com/kata/56786a687e9a88d1cf00005d/train/javascript
+function validateWord(s) {
+  let arr = s.toLowerCase().split('')
+  return arr.every(el => arr.indexOf(el) === arr.lastIndexOf(el)) || arr.every(el => arr.indexOf(el) !== arr.lastIndexOf(el));
+}
