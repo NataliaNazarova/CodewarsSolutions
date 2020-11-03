@@ -1,0 +1,12 @@
+// Calculate mean and concatenate string
+// https://www.codewars.com/kata/56f7493f5d7c12d1690000b6/train/javascript
+function mean(lst){
+  let arr1 = [];
+  for (let el of lst){
+     if (typeof +el === 'number') {arr1.push(+el)}
+  }
+  let arr2 = arr1.filter(el => el >= 0)
+  let sum = arr2.reduce((a, b) => a + b) / arr2.length;
+  let str = lst.filter(el => !('0123456789').includes(el)).join('')
+  return [sum, str]
+}
