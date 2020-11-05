@@ -1,0 +1,16 @@
+//The Skiponacci Sequence
+// https://www.codewars.com/kata/580777ee2e14accd9f000165/train/javascript
+function skiponacci(n) {
+  let arr = [];
+  if (n === 1) return '1';
+  if (n === 2) return '1 skip'
+  else {
+    arr.push(1)
+    arr.push(1)
+    for (let i = 3; i <= n; i++){
+      let a = arr[arr.length - 1] + arr[arr.length - 2];
+      arr.push(a);
+  }
+  return arr.map((el, i) => i % 2 === 0 ? el: el = "skip").join(' ')
+  }
+}
