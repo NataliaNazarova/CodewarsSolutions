@@ -1,0 +1,11 @@
+// Array Leaders (Array Series #3)
+// https://www.codewars.com/kata/5a651865fd56cb55760000e0/train/javascript
+let arrayLeaders = arr => {
+  let ar = [];
+   for (let i = 0; i < arr.length - 1; i++){
+    let a2 = arr.slice(i + 1, arr.length).reduce((a, b) => a + b);
+    if (arr[i] > a2) ar.push(arr[i]);
+  }
+  if (arr[arr.length - 1] > 0)ar.push(arr[arr.length - 1]);
+  return ar;
+}
