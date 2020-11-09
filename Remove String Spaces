@@ -1,0 +1,9 @@
+// Remove String Spaces
+// https://www.codewars.com/kata/57eae20f5500ad98e50002c5/train/javascript
+function noSpace(x){
+  let str = '';
+  for (let el of x){
+    if (el !== ' ') str = str + el;
+  }
+  return str;
+}
