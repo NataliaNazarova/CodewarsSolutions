@@ -1,0 +1,12 @@
+// L1: Bartender, drinks!
+// https://www.codewars.com/kata/568dc014440f03b13900001d/train/javascript
+function getDrinkByProfession(param){
+  let arr1 = ["Jabroni", "School Counselor", "Programmer", "Bike Gang Member", "Politician", "Rapper"];
+  let arr2 = ["Patron Tequila", "Anything with Alcohol", "Hipster Craft Beer", "Moonshine", "Your tax dollars", "Cristal"];
+  for (let i = 0; i < arr1.length; i++){
+    if (param.toLowerCase() === arr1[i].toLowerCase()) {
+      return arr2[i];
+      }
+  }
+  return 'Beer';
+}
