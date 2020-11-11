@@ -1,0 +1,10 @@
+//Palindrome chain length
+// https://www.codewars.com/kata/525f039017c7cd0e1a000a26/train/javascript
+let palindromeChainLength = function(n) {
+  let count = 0;
+  while (n !== +String(n).split('').reverse().join('')){
+    count++;
+    n = n + +String(n).split('').reverse().join('');
+  }
+  return count;
+}
