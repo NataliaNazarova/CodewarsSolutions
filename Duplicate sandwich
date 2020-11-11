@@ -1,0 +1,13 @@
+// Duplicate sandwich
+// https://www.codewars.com/kata/5f8a15c06dbd530016be0c19/train/javascript
+function duplicateSandwich(a) {
+  let n = 0;
+  if (typeof a === 'string') {
+    a = a.split('')
+    n = 1;
+  }
+  let d = a.filter( el => a.indexOf(el) !== a.lastIndexOf(el));
+  let i1 = a.indexOf(d[0]);
+  let i2 = a.lastIndexOf(d[0]);
+  return n === 0 ? a.slice(i1 + 1, i2): a.slice(i1 + 1, i2).join('');
+}
