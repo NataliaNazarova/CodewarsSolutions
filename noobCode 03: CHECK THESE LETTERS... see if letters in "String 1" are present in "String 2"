@@ -1,0 +1,12 @@
+// noobCode 03: CHECK THESE LETTERS... see if letters in "String 1" are present in "String 2"
+// https://www.codewars.com/kata/57470efebf81fea166001627/train/javascript
+function letterCheck(arr) {
+  let count = 0;
+  let arr1 = [];
+  arr1[0] = arr[0].toLowerCase();
+  arr1[1] = arr[1].toLowerCase();
+  for (let i = 0; i < arr1[1].length; i++){
+    if (arr1[0].includes(arr1[1][i])) count++;
+  }
+  return count === arr[1].length;
+}
