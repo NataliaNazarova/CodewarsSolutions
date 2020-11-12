@@ -1,0 +1,14 @@
+// Name on billboard 
+// https://www.codewars.com/kata/570e8ec4127ad143660001fd/train/javascript
+function billboard(name, price = 30){
+  let s = 0;
+  for (let i = 0; i < name.length; i++){
+    s = s + price;
+  }
+  return s;
+} 
+
+
+function billboard(name, price = 30){
+  return name.repeat(price).length;
+} 
