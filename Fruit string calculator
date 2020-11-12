@@ -1,0 +1,16 @@
+// Fruit string calculator
+//https://www.codewars.com/kata/57b9fc5b8f5813384a000aa3/train/javascript
+function calculate(str) {
+ let s = '0123456789'
+  let arr = str.split(' ');
+  let ar = []
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i] === 'loses' || arr[i] === 'gains') ar.push(arr[i]);
+    else {
+      for (let j = 0; j < arr[i].length; j++){
+        if (s.includes(arr[i][j])) ar.push(arr[i]); break;
+      }
+    }
+  }
+  return ar[1] === 'loses' ? +`${+ar[0] - +ar[2]}`: +`${+ar[0] + +ar[2]}`;
+}
