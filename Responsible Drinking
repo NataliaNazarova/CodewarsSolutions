@@ -1,0 +1,6 @@
+// Responsible Drinking
+// https://www.codewars.com/kata/5aee86c5783bb432cd000018/train/javascript
+function hydrate(s) {
+  let a = s.replace(/\D/g, '').split('').reduce((x, y)=> +x + +y)
+  return `${a} glass${a > 1 ? 'es': ''} of water`;
+}
