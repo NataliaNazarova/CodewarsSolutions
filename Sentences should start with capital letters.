@@ -1,0 +1,14 @@
+// Sentences should start with capital letters.
+// https://www.codewars.com/kata/5bf774a81505a7413400006a/train/javascript
+function fix(p){
+  let s = p.split('.');
+  let str = []
+  if (s.length === 1) return p;
+  else {
+    str[0] = (s[0].slice(0, 1)).toUpperCase() + s[0].slice(1);
+    for (let i = 1; i < s.length -1; i++) {
+      str[i] = (s[i].slice(0, 2)).toUpperCase() + s[i].slice(2)
+    }
+  }
+  return str.join('.') + '.';
+}
