@@ -1,0 +1,18 @@
+// Simple equation reversal
+https://www.codewars.com/kata/5aa3af22ba1bb5209f000037/train/javascript
+function solve(eq){
+  res = '';
+  num = '';
+  for (i=0; i<eq.length; i++) {
+    if (!isNaN(+eq[i])) {
+      num += eq[i];
+      continue;
+    }
+    if (num.length > 0) {
+      res = num + res;
+      num = '';
+    }
+    res = eq[i] + res;
+  }
+  return num+res;
+}
