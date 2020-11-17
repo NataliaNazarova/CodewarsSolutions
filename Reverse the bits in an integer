@@ -1,0 +1,6 @@
+// Reverse the bits in an integer
+// https://www.codewars.com/kata/5959ec605595565f5c00002b/train/javascript
+function reverseBits (n) {
+  let a = n.toString(2).split('').reverse().join('');
+  return parseInt(a, 2);
+}
