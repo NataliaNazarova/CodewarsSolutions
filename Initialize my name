@@ -1,0 +1,11 @@
+//Initialize my name
+// https://www.codewars.com/kata/5768a693a3205e1cc100071f/train/javascript
+function initializeNames(name){
+  let n = name.split(' ');
+  if (n.length > 2){
+    for (let i = 1; i <= n.length - 2; i++){
+    n[i] = n[i].slice(0, 1) + '.';
+    }
+  }
+  return n.join(' ')
+}
