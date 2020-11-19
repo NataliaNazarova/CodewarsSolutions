@@ -1,0 +1,5 @@
+// Is number a palindrome?
+// https://www.codewars.com/kata/5643a38eee5d5719d5000077/train/javascript
+function isPalindromic(a){
+  return  a === +String(a).split('').reverse().join('');
+}
