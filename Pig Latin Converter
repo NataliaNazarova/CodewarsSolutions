@@ -1,0 +1,5 @@
+// Pig Latin Converter
+// https://www.codewars.com/kata/57fe90ae08d102a2ba0011e6/train/javascript
+function pigLatin(phrase){
+  return phrase.split(' ').map(el => el.slice(1) + el[0] + 'ay').join(' ').toLowerCase();  
+} 
