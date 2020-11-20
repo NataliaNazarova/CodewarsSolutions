@@ -1,0 +1,16 @@
+// Exclamation marks series #13: Count the number of exclamation marks and question marks, return the product
+// https://www.codewars.com/kata/57fb142297e0860073000064/train/javascript
+function product(s){
+  let c1 = 0;
+  let c2 = 0;
+  for (let el of s) {
+    if (el === '!') c1++;
+    if (el === '?') c2++;
+  }
+  return c1 * c2;
+}
+
+
+function product(s){
+  return (s.split('!').length - 1) * (s.split('?').length - 1);
+}
