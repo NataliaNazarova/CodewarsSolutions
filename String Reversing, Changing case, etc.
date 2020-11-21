@@ -1,0 +1,8 @@
+// String Reversing, Changing case, etc.
+// https://www.codewars.com/kata/58305403aeb69a460b00019a/train/javascript
+function reverseAndMirror(s1,s2) {
+  let str1 = s2.split('').map(el => el.toLowerCase() === el ? el.toUpperCase(): el.toLowerCase()).reverse().join(''); 
+  let str2 = s1.split('').map(el => el.toLowerCase() === el ? el.toUpperCase(): el.toLowerCase());
+  let str22 = str2.reverse().join('') + str2.reverse().join('');
+  return str1 + '@@@' + str22;
+}
