@@ -1,0 +1,16 @@
+// Can Santa save Christmas?
+// https://www.codewars.com/kata/5857e8bb9948644aa1000246/train/javascript
+function determineTime(d){
+  let s = 0;
+  let arr = [];
+  let a = [];
+  if (d && d.length === 0){
+    return true;
+   } else if (d.length > 0) {
+    a = d.map(el => el.split(':'));
+    for (let i = 0; i < a.length; i++){
+      arr.push(+a[i][0] * 60 + +a[i][1]);
+    }
+  return arr.reduce((a, b) => a + b)/60 <= 24;
+  }
+}
