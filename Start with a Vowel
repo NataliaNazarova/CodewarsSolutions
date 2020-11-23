@@ -1,0 +1,12 @@
+// Start with a Vowel
+// https://www.codewars.com/kata/5a02e9c19f8e2dbd50000167/train/javascript
+function vowelStart(str){
+  let str1 = str.replace(/\W/g, '').replace(/_/, '').toLowerCase();
+  let s = '';
+  const v = 'euioa';
+  for (let i = 0; i < str1.length; i++){
+    if (v.includes(str1[i]) && i !== 0) s = s + ' ' + str1[i];
+    else s += str1[i];
+  }
+  return s;
+}
