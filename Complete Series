@@ -1,0 +1,15 @@
+// Complete Series
+// https://www.codewars.com/kata/580a4001d6df740d61000301/train/javascript
+function completeSeries(arr) {
+  let a = arr.length;
+  let arrNew = [];
+  let ar = arr.filter(el=> arr.indexOf(el) === arr.lastIndexOf(el));
+  if (arr.length !== ar.length) {
+     return [0];
+  } else {
+      for (let i = 0; i <= Math.max(...ar); i++){
+        arrNew.push(i);
+      }
+    }
+    return arrNew;
+}
