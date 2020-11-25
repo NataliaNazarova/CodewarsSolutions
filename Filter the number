@@ -1,0 +1,22 @@
+// Filter the number
+// https://www.codewars.com/kata/55b051fac50a3292a9000025/train/javascript
+
+let FilterString = function(value) {
+  let str = '';
+  for (let i = 0; i < value.length; i++) {
+    if (!isNaN(value[i])) {
+      str = str + value[i];
+    } else continue;
+  }
+  return +str;
+}
+
+
+let FilterString = function(s) {
+  return +s.replace(/[^0-9]/g, '');
+}
+
+
+var FilterString = function(s) {
+  return +s.replace(/\D/g, '');
+}
