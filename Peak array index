@@ -1,0 +1,10 @@
+// Peak array index
+// https://www.codewars.com/kata/5a61a846cadebf9738000076/train/javascript
+function peak(arr){
+  for (let i = 1; i < arr.length -1; i++){
+    let a1 = arr.slice(0, i).reduce((a, b) => a + b);
+    let a2 = arr.slice(i + 1, arr.length).reduce((a, b) => a + b);
+    if (a1 === a2) return i;
+  }
+  return -1;
+}
