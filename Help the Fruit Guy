@@ -1,0 +1,10 @@
+// Help the Fruit Guy
+// https://www.codewars.com/kata/557af4c6169ac832300000ba/train/javascript
+function removeRotten(arr){
+  if (arr !== null && arr !== undefined){
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i].startsWith('rotten')) arr[i] = arr[i].slice(6).toLowerCase();
+  }
+    }
+  return arr !== null && arr !== undefined ? arr: [];
+}
