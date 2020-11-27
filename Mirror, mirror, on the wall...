@@ -8,3 +8,17 @@ function mirror(data) {
   }
   return arr;
 }
+
+function mirror(data) {
+  let copy1 = data.slice().sort((a, b) => a - b);
+  let copy2 = data.slice().sort((a, b) => b - a).slice(1);
+  return copy1.concat(copy2);
+}
+
+
+function mirror(data) {
+  let copy1 = data.slice().sort((a, b) => a - b);
+  let copy2 = data.slice().sort((a, b) => b - a).slice(1);
+  return [...copy1, ...copy2];
+}
+
