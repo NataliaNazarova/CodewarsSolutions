@@ -1,0 +1,9 @@
+// Find Duplicates
+// https://www.codewars.com/kata/5558cc216a7a231ac9000022/train/javascript
+function duplicates(arr) {
+  let arrNew = [];
+  let arr2 = [];
+  arr2 = arr.filter((el, i) => arr.indexOf(el) !== arr.lastIndexOf(el) && i !== arr.indexOf(el));
+  arrNew = arr2.filter((el, i) => i === arr2.indexOf(el))
+  return arrNew;
+}
