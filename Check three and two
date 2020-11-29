@@ -1,0 +1,12 @@
+// Check three and two
+// https://www.codewars.com/kata/5a9e86705ee396d6be000091/train/javascript
+
+function checkThreeAndTwo(array) {
+  let obj = {}
+  for (let el of array){
+    if (obj[el]) obj[el]++; // (el in obj)
+    else obj[el] = 1;
+  }
+  //return Object.values(obj).includes(3) && Object.values(obj).includes(2);
+  return Object.values(obj).filter(el => el > 3 || el < 2).length === 0
+}
