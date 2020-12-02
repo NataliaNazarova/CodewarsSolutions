@@ -1,0 +1,13 @@
+// Blood-Alcohol Content
+// https://www.codewars.com/kata/571b6a4a7beb0a8ade0007a8/train/javascript
+
+function bloodAlcoholContent(drinks, weight, sex, time){
+  let bObj = { };
+  bObj.drink = drinks;
+  bObj.w = weight;
+  bObj.sex = sex;
+  bObj.time = time;
+  let bacM = (bObj.drink.ounces * bObj.drink.abv * 5.14 / bObj.w * 0.73) - 0.015 * bObj.time;
+  let bacW = (bObj.drink.ounces * bObj.drink.abv * 5.14 / bObj.w * 0.66) - 0.015 * bObj.time;
+  return bObj.sex === 'male' ? +bacM.toFixed(4) : +bacW.toFixed(4);
+}
