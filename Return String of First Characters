@@ -1,0 +1,11 @@
+// Return String of First Characters
+// https://www.codewars.com/kata/5639bdcef2f9b06ce800005b/train/javascript
+
+function makeString(s){
+  let arr = s.split(' ');
+  let str = '';
+  for (let i = 0; i < arr.length; i++){
+    str = str + arr[i].slice(0, 1)
+  }
+  return str;
+}
