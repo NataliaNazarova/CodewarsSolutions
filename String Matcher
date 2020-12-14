@@ -1,0 +1,8 @@
+// String Matcher
+// https://www.codewars.com/kata/565ce4ab24ef4aee6a000074/train/javascript
+
+function isMatching(string, str1, str2) {
+  let str = (str1 + str2).split(' ').join('').toLowerCase().split('').sort().join('');
+  let string1 = string.split(' ').join('').toLowerCase().split('').sort().join('');
+  return str == string1;
+}
