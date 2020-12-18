@@ -1,0 +1,7 @@
+// Divisible by 9?
+// https://www.codewars.com/kata/5f7b1a82be51af00105c82bd/solutions/javascript
+
+function divBy9(ns){
+  let str = ns.split('').reduce((a, b) => +a + +b);
+  return str % 9 === 0;
+}
