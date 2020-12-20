@@ -1,0 +1,6 @@
+// Dan's great power generator
+// https://www.codewars.com/kata/582c42e0f000e54a7d000086/train/javascript
+
+function danspower(num, power) {
+  return Math.pow(num, power) % 2 ? Math.round(Math.pow(num, power) / 10) * 10 : Math.pow(num, power);
+}
