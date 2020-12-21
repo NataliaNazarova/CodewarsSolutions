@@ -1,0 +1,7 @@
+// How bigga ma pizza ?
+// https://www.codewars.com/kata/5e9c06f95ea5b30033903194/train/javascript
+
+function howBiggaMaPizza(blob, crust) {
+  let v = (4 / 3) * Math.PI * (blob / 2) ** 3;
+  return crust === "crispy" ? Math.sqrt(v / Math.PI): Math.sqrt(v / Math.PI / 5);
+}
