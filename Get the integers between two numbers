@@ -1,0 +1,10 @@
+// Get the integers between two numbers
+// https://www.codewars.com/kata/598057c8d95a04f33f00004e/train/javascript
+
+function range(startNum, endNum) {  
+  let ar = [];
+  for (i = startNum + 1; i < endNum; i++){
+    ar.push(i);
+  }
+  return ar;
+}
