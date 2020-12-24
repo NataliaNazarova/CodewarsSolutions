@@ -1,0 +1,9 @@
+// Larger Product or Sum
+// https://www.codewars.com/kata/5c4cb8fc3cf185147a5bdd02/train/javascript
+
+function sumOrProduct(arr, n) {
+  let ar1 = arr.sort((a, b) => a - b);
+  let p = ar1.slice(0, n).reduce((a, b) => a * b);
+  let s = ar1.slice(-n).reduce((a, b) => a + b);
+  return s > p ? 'sum': s < p ? 'product' : 'same';
+}
