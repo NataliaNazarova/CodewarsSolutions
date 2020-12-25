@@ -1,0 +1,16 @@
+// Merge two arrays
+// https://www.codewars.com/kata/583af10620dda4da270000c5/train/javascript
+
+function mergeArrays(a, b) {
+  let arr = [];
+  let aL = a.length;
+  let bL = b.length;
+  for(let i = 0; i < Math.min(aL, bL); i++){
+    arr.push(a[i]);
+    arr.push(b[i]);
+  }
+  let ar = []
+  if (aL > bL) ar = arr.concat(a.slice(bL - aL));
+  else if (aL < bL) ar = arr.concat(b.slice(aL - bL));
+  return aL !== bL ? ar : arr;
+}
