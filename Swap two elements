@@ -1,0 +1,11 @@
+// Swap two elements
+// https://www.codewars.com/kata/5a3f4eace1ce0eeda600003d/train/javascript
+
+function swapTwo(ar, a, b) {
+  array = ar.slice();
+  let a1 = array.indexOf(a);
+  let bLast = array.lastIndexOf(b);
+  array[a1] = b;
+  array[bLast] = a;
+  return array;
+}
