@@ -1,0 +1,15 @@
+// Simple Fun #17: Rounders
+// https://www.codewars.com/kata/58846d50f54f021d90000012/train/javascript
+
+function rounders(n) {
+  let l = String(n).length;
+  let ar = String(n).split('');
+  let a = 0;
+  for (let i = l - 1; i > 0;i--){
+    if (ar[i] >= 5) {
+      ar[i - 1] = (+ar[i - 1] + 1) + '';
+    }
+    ar[i] = 0;
+  }
+  return +ar.join('');
+}
