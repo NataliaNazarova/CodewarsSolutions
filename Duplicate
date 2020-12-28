@@ -1,0 +1,8 @@
+// Duplicate
+// https://www.codewars.com/kata/599b6f883c52928dbe00006a/train/javascript
+
+function existsDuplicate(n){
+  let arr = [];
+  arr = n.filter(el => n.indexOf(el) === n.lastIndexOf(el));
+  return n.length !== arr.length;
+}
