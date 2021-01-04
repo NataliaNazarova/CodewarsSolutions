@@ -1,0 +1,10 @@
+// Sushi-go-round (Beginner's)
+// https://www.codewars.com/kata/59619e4609868dd923000041/train/javascript
+
+function totalBill(str) {
+  let s = 0;
+  for (let i = 0; i < str.length; i++){
+    if (str[i] === 'r') s++;
+  }
+  return Math.floor(s / 5) * 4 * 2 + s % 5 * 2;
+}
