@@ -1,0 +1,11 @@
+// Polydivisible Numbers
+// https://www.codewars.com/kata/5e4217e476126b000170489b/train/javascript
+
+function polydivisible(x) {
+  let num = String(x);
+  for (let i = 1; i <= num.length; i++){
+    let n = num.slice(0, i)
+    if(+n % i !== 0) return false;
+  }
+  return true;
+}
