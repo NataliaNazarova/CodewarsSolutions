@@ -1,0 +1,13 @@
+// Scrolling Text
+// https://www.codewars.com/kata/5a995c2aba1bb57f660001fd/train/javascript
+
+function scrollingText(text){
+  let str = text.toUpperCase();
+  let arr = [];
+  arr.push(str);
+  for (let i = 1; i < str.length; i++){
+    let s = str.slice(i) + str.slice(0, i);
+    arr.push(s);
+  }
+  return arr;
+}
