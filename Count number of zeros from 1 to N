@@ -1,0 +1,12 @@
+// Count number of zeros from 1 to N
+// https://www.codewars.com/kata/557cffec8c3e8e55cc00010f/train/javascript
+
+function countZeros(n) {
+  let s = 0;
+  let str = '';
+  for(let i = 1; i <= n; i++){
+    str = str + i;
+  }
+  let arr = str.split('').filter(el => el === '0');
+  return arr.length;
+}
