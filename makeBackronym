@@ -1,0 +1,21 @@
+// makeBackronym
+// https://www.codewars.com/kata/55805ab490c73741b7000064/train/javascript
+
+let makeBackronym = function(string){
+  console.log(string)
+  const dict = {
+    'a': 'awesome', 'b': 'beautiful', 'c': 'confident', 'd': 'disturbing',
+    'e': 'eager', 'f': 'fantastic', 'g': 'gregarious', 'h': 'hippy',
+    'i': 'ingestable', 'j': 'joke', 'k': 'klingon', 'l': 'literal',
+    'm': 'mustache', 'n': 'newtonian', 'o': 'oscillating',
+    'p': 'perfect', 'q': 'queen', 'r': 'rant', 's': 'stylish',
+    't': 'turn', 'u': 'underlying', 'v': 'volcano',
+    'w': 'weird', 'x': 'xylophone', 'y': 'yogic', 'z': 'zero',
+  }
+  let arr = [];
+  for (let i = 0; i < string.length; i++){
+    let l = dict[string[i]];
+    arr.push(l)
+  }
+  return arr.join(' ');
+};
