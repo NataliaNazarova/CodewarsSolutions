@@ -1,0 +1,7 @@
+// Duck Duck Goose
+// https://www.codewars.com/kata/582e0e592029ea10530009ce/train/javascript
+
+function duckDuckGoose(players, goose) {
+  let a = goose - 1
+  return players[a % players.length].name;
+}
