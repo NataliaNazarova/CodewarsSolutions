@@ -1,0 +1,17 @@
+// Ce*s*r*d Strings
+// https://www.codewars.com/kata/5ff6060ed14f4100106d8e6f/train/javascript
+
+function uncensor(infected, discovered) {
+  let str = '';
+  let n = 0;
+  let j = 0;
+  for (let i = 0; i < infected.length; i++){
+    if (infected[i] !== '*') {
+      str += infected[i];
+      } else {
+      str = str + discovered[j];
+      j++;
+    }
+  }
+  return str;
+}
