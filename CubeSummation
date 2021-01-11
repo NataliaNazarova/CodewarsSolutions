@@ -1,0 +1,11 @@
+// CubeSummation
+// https://www.codewars.com/kata/550e9fd127c656709400024d/train/javascript
+
+function cubeSum(n, m){
+  if (n === m) return 0;
+  let s = 0;
+  for (let i = Math.min(n, m) + 1; i <= Math.max(n, m); i++){
+    s = s + i ** 3;
+  }
+  return s;
+}
