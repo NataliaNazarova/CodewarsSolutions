@@ -11,3 +11,17 @@ function duplicateSandwich(a) {
   let i2 = a.lastIndexOf(d[0]);
   return n === 0 ? a.slice(i1 + 1, i2): a.slice(i1 + 1, i2).join('');
 }
+
+
+function duplicateSandwich(a) {
+  let ind = 0;
+  let ind2 = 0;
+  for(let i =0; i< a.length; i++){
+    if (a.indexOf(a[i]) !== a.lastIndexOf(a[i])){
+      ind = a.indexOf(a[i]);
+      ind2 = a.lastIndexOf(a[i]);
+      break;
+    }
+  }
+  return a.slice(ind + 1, ind2);
+}
