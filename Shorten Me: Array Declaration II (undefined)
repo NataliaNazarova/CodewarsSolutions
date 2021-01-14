@@ -1,0 +1,4 @@
+// Shorten Me: Array Declaration II (undefined)
+// https://www.codewars.com/kata/5a54c56cb6be5311850014df/train/javascript
+
+array=()=>[...typeof a]
