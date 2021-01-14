@@ -1,0 +1,19 @@
+// Consecutive Count
+// https://www.codewars.com/kata/59c3e819d751df54e9000098/train/javascript
+
+function getConsectiveItems(items, key){
+  let count = 0;
+  items = items + '';
+  key = key + '';
+  let arr = [];
+  for(let i = 0; i < items.length; i++){
+    if(items[i] == key) {
+      while(items[i] == key){
+        count++;
+        i++;
+      }
+      arr.push(count); count = 0;
+    }
+  }
+  return arr.length ? Math.max(...arr) : 0;
+}
