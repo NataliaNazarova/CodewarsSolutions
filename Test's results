@@ -1,0 +1,13 @@
+// Test's results
+// https://www.codewars.com/kata/599db0a227ca9f294b0000c8/train/javascript
+
+function testResult(array) {
+  let ar = [];
+  ar[0] = +(array.reduce((a, b) => a + b) / array.length).toFixed(3);
+  ar[1] = {};
+  ar[1].h = array.filter(el => el >= 9).length;
+  ar[1].a = array.filter(el => el === 7 || el === 8).length;
+  ar[1].l = array.filter(el => el <= 6).length;
+  if (ar[1].a == 0 && ar[1].l == 0) ar[2] = 'They did well';
+  return ar;
+}
