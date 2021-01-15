@@ -1,0 +1,11 @@
+// Find The Duplicated Number in a Consecutive Unsorted List
+// https://www.codewars.com/kata/558dd9a1b3f79dc88e000001/train/javascript
+
+function findDup( arr ){
+  return arr.filter(el => arr.indexOf(el) !== arr.lastIndexOf(el))[0];
+}
+
+
+function findDup( arr ){
+  return arr.find(el => arr.indexOf(el) !== arr.lastIndexOf(el));
+}
