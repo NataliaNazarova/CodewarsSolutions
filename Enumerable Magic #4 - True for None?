@@ -7,3 +7,13 @@ function none(arr, fun){
   }
   return true;
 }
+
+
+function none(arr, fun){
+  if (arr.length === 0) return true;
+  let count = 0;
+  for(el of arr){
+    if (fun(el) === true ) count++;
+  }
+  return count || !!fun(el) ? false: true;
+}
