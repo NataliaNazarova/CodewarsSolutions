@@ -1,0 +1,12 @@
+// Numbers to Objects
+// https://www.codewars.com/kata/57ced2c1c6fdc22123000316/train/javascript
+
+function numObj(s){
+    let arr = [];
+  for (let i = 0; i < s.length; i++){
+    let obj = {};
+    obj[String(s[i])] = String.fromCharCode(s[i]);
+    arr.push(obj)
+  }
+  return arr;
+}
