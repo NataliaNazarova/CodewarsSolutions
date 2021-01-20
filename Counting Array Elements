@@ -1,0 +1,11 @@
+// Counting Array Elements
+// https://www.codewars.com/kata/5569b10074fe4a6715000054/train/javascript
+
+function count(array){
+  let obj = {};
+  for (el of array){
+    if(el in obj) obj[el]++;
+    else obj[el] = 1;
+  }
+  return obj;
+}
