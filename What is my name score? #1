@@ -1,0 +1,13 @@
+// What is my name score? #1
+// https://www.codewars.com/kata/576a29ab726f4bba4b000bb1/train/javascript
+
+function nameScore(name){
+  let str = name.toUpperCase();
+  let sum = 0;
+  for(let key in alpha){
+    for( let i = 0; i < str.length; i++){
+      if(key.includes(str[i])) sum += alpha[key]
+    }
+  }
+ return { [name]: sum};
+}
