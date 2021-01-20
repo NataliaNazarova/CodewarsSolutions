@@ -1,0 +1,12 @@
+// The Office I - Outed
+// https://www.codewars.com/kata/57ecf6efc7fe13eb070000e1/train/javascript
+
+function outed(meet, boss){
+  let sum = meet[boss];
+  let count = 0;
+  for(let key in meet){
+    sum += meet[key];
+    count++;
+  }
+  return sum / count <= 5 ? 'Get Out Now!': 'Nice Work Champ!';
+}
