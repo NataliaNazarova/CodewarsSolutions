@@ -1,0 +1,14 @@
+// Most valuable character
+// https://www.codewars.com/kata/5dd5128f16eced000e4c42ba/train/javascript
+
+function solve(st) {
+  let arr = st.split('');
+  let obj = {};
+  for(let i = 0; i < st.length; i++){
+    if(arr[i] in obj) continue;
+    else obj[arr[i]] = arr.lastIndexOf(arr[i]) - arr.indexOf(arr[i]);
+  }
+  const maxValue = Math.max.apply(null, Object.values(obj))
+  // фильтруем по максимальному значению массив ключей
+  return Object.keys(obj).filter(k => obj[k] === maxValue).sort()[0];
+}
