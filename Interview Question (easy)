@@ -1,0 +1,17 @@
+// Interview Question (easy)
+// https://www.codewars.com/kata/5b358a1e228d316283001892/train/javascript
+
+function getStrings(city){
+  let str = city.toLowerCase().replace(/\s/g, '');
+  let obj = {};
+  for(let el of str){
+    if(el in obj) obj[el] = obj[el] + "*";
+    else obj[el] = '*';
+  }
+  let str2 = '';
+  let arr = Object.entries(obj)
+  for(let i = 0; i < arr.length; i++){
+    str2 = str2 + arr[i][0] + ':' + arr[i][1] + ',';
+  }
+  return str2.slice(0, -1)
+}
