@@ -1,0 +1,6 @@
+// My Languages
+// https://www.codewars.com/kata/5b16490986b6d336c900007d/train/javascript
+
+function myLanguages(results) {
+  return Object.entries(results).filter(el => el[1] >= 60).sort((a, b) => b[1] - a[1]).map(el=> el = el[0]);  
+}
