@@ -1,0 +1,20 @@
+// The most common letter
+// https://www.codewars.com/kata/5a434a9dc5e284724f000011/train/javascript
+
+function replaceCommon(string, letter) {
+  let str = string.replace(/\s/g, '');
+  let obj = {};
+  for(let el of str){
+    if(el in obj) obj[el]++;
+    else obj[el] = 1;
+  }
+  
+  let maxValue = Math.max(...(Object.values(obj)));
+  let maxKeys = Object.keys(obj).filter(el => obj[el] === maxValue)[0]
+  let s = '';
+  for(let i = 0; i < string.length; i++){
+    if(string[i] === maxKeys) s = s + letter;
+    else s += string[i];
+  }
+  return s;
+}
