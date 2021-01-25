@@ -1,0 +1,16 @@
+// Pair of gloves
+// https://www.codewars.com/kata/58235a167a8cb37e1a0000db/train/javascript
+
+function numberOfPairs(gloves){
+  let obj = {};
+  for(let el of gloves){
+    if(el in obj) obj[el]++;
+    else obj[el] = 1;
+  }
+  let gl = Object.values(obj);
+  let pair = 0;
+  for(let el of gl){
+    pair = pair + Math.floor(el/2);
+  }
+  return pair;
+}
