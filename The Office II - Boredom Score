@@ -1,0 +1,23 @@
+// The Office II - Boredom Score
+// https://www.codewars.com/kata/57ed4cef7b45ef8774000014/train/javascript
+
+function boredom(staff){
+  const score = {
+    'accounts': 1,
+    'finance': 2,
+    'canteen': 10,
+    'regulation': 3,
+    'trading': 6,
+    'change': 6,
+    'IS': 8,
+    'retail': 5,
+    'cleaning': 4,
+    'pissing about': 25,
+  }
+  let sum = 0;
+  let st = Object.values(staff);
+  for(let el of st){
+    sum = sum + score[el];
+  }
+  return sum <= 80 ? 'kill me now': sum < 100 ? 'i can handle this': 'party time!!';
+}
