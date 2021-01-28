@@ -1,0 +1,12 @@
+// Summations: 1
+// https://www.codewars.com/kata/55c02535bf0974404b0000f9/train/javascript
+
+function summation(x){
+  if(Number.isInteger(x)){
+    let sum = 0;
+    for(let i = 1; i <= x; i++){
+      sum += i;
+    }  
+    return sum;
+   } else return 'Invalid Value';
+}
