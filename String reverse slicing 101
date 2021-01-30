@@ -1,0 +1,11 @@
+// String reverse slicing 101
+// https://www.codewars.com/kata/586efc2dcf7be0f217000619/train/javascript
+
+function reverseSlice(str) {
+  let str1 = str.split('').reverse().join('');
+  let arr = [];
+  for(let i = 0; i < str1.length; i++){
+    arr.push(str1.slice(i))
+  }
+  return arr;
+}
