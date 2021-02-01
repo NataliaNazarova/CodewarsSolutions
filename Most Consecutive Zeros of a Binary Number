@@ -1,0 +1,32 @@
+// Most Consecutive Zeros of a Binary Number
+// https://www.codewars.com/kata/59decdf40863c76ae3000080/train/javascript
+
+function maxConsecZeros(n){
+  let digit = {
+    0: 'Zero',
+    1: 'One',
+    2: 'Two',
+    3: 'Three',
+    4: 'Four',
+    5: 'Five',
+    6: 'Six',
+    7: 'Seven',
+    8: 'Eight',
+    9: 'Nine',
+    10: 'Ten',
+    11: 'Eleven',
+    12: 'Twelve',
+    13: 'Thirteen',
+  }
+  let num = Number(n).toString(2) + '';
+  let count = 0;
+  let arr = [];
+  for (let i = 0; i < num.length; i++){
+    if(num[i] === '0') count++;
+    if(num[i] !== '0' || i === num.length - 1) {
+      arr.push(count);
+      count = 0;
+    }
+  }
+  return digit[(Math.max(...arr))];
+}
