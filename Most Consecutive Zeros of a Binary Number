@@ -30,3 +30,18 @@ function maxConsecZeros(n){
   }
   return digit[(Math.max(...arr))];
 }
+
+function maxConsecZeros(n){
+  let digit = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve', 'Thirteen'];
+  let num = Number(n).toString(2) + '';
+  let count = 0;
+  let arr = [];
+  for (let i = 0; i < num.length; i++){
+    if(num[i] === '0') count++;
+    if(num[i] !== '0' || i === num.length - 1) {
+      arr.push(count);
+      count = 0;
+    }
+  }
+  return digit[(Math.max(...arr))];
+}
