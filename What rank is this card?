@@ -1,0 +1,15 @@
+// What rank is this card?
+// https://www.codewars.com/kata/59cbcb4523dacc2ccd000030/train/javascript
+
+function rank(card) {
+  let c = {
+    'T': 10,
+    'J': 11,
+    'Q': 12,
+    'K': 13,
+    'A': 14,
+  }
+  if(typeof +card[0] === 'number' && +card[0] > 1) return +card[0];
+  else if(c[card[0]]) return c[card[0]];
+       else return 0;
+}
