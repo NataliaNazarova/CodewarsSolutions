@@ -1,0 +1,10 @@
+// Sum The Strings: ARRAY EDITION
+// https://www.codewars.com/kata/5966ffb962d030e11a00005a/train/javascript
+
+function sumArr(a,b) {
+  let arr = [];
+  for (let i = 0; i < a.length; i++){
+    arr[i] = String(Number(a[i]) + Number(b[i]));
+  }
+  return arr;
+}
