@@ -1,0 +1,18 @@
+// Print count and numbers
+// https://www.codewars.com/kata/559af787b4b8eac78b000022/train/javascript
+
+function countMe(data){
+  let a = data.replace(/\D/g, '');
+  if(data.length === 0 || data.length !== a.length) return '';
+  else if (data.length === 1) return '1' + data[0];
+       else {
+         let s = '';
+         let count = 1;
+         for(let i = 1; i < data.length; i++){  
+           if(data[i] === data[i -1]) count++;
+             else {s = s + String(count) + data[i-1]; count = 1;}
+             if(i === data.length -1) s = s + String(count) + data[i];
+    }
+    return s;
+  }
+}
