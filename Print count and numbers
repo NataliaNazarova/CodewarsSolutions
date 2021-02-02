@@ -16,3 +16,18 @@ function countMe(data){
     return s;
   }
 }
+
+
+function countMe(data){
+  if (data === "" ||Number(parseInt(data))!== Number(data)) return "";
+  let s = data[0];
+  for(let i = 1; i < data.length; i++){
+    if(s[s.length-1] !== data[i]){
+      s += " " + data[i];
+    } else {
+      s += data[i];
+    }
+  }
+  s = s.split(" ");
+  return s.map(el=>el.length+el[0]).join("")
+}
