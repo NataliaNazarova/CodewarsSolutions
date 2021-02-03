@@ -1,0 +1,13 @@
+// Sum of all arguments.
+// https://www.codewars.com/kata/55e31d3b802da5225b0000ff/train/javascript
+
+function sum(){
+  let total = 0;
+  for(element of arguments){
+    if(typeof element !== 'number' || isNaN(element)){
+    return false;
+    }
+  total += element;
+  } 
+  return total;
+}
