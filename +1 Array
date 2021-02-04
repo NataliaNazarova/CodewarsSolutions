@@ -1,0 +1,6 @@
+// +1 Array
+// https://www.codewars.com/kata/5514e5b77e6b2f38e0000ca9/train/javascript
+
+function upArray(arr){
+  return arr.length > 0 && arr.length < 16 && arr.every(el => typeof el === 'number' && el >= 0 && el < 10) ? String(+arr.join('') + 1).split('').map(el => +el): arr.length >= 16 ? arr.slice(0, -1).concat(arr[arr.length - 1] + 1):null;
+}
