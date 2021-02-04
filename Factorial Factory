@@ -1,0 +1,6 @@
+// Factorial Factory
+// https://www.codewars.com/kata/528e95af53dcdb40b5000171/train/javascript
+
+function factorial (n) {
+  return n === 0 ? 1 : n < 0 ? null: n * factorial(n - 1);
+}
