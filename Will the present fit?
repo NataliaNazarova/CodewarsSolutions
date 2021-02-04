@@ -6,3 +6,10 @@ function willFit(present, box){
   let b = box.sort((a, b) => a - b);
   return pr[0] <= b[0] - 2 && pr[1] <= b[1] - 2 && pr[2] <= b[2] - 2;
 }
+
+
+function willFit(present, box){
+  let pr = present.sort((a, b) => a - b);
+  let b = box.sort((a, b) => a - b);
+  return pr.every((el,i) => el <= b[i] - 2);
+}
