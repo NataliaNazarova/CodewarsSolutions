@@ -1,0 +1,10 @@
+// Arithmetic progression
+// https://www.codewars.com/kata/55caf1fd8063ddfa8e000018/train/javascript
+
+function arithmeticSequenceElements(a,r,n) {
+  let arr = [];
+  for(let i = 1; i <= n; i++){
+    arr.push(a + r * (i - 1));
+  }
+  return arr.join(', ');
+}
