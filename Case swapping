@@ -1,0 +1,11 @@
+// Case swapping
+// https://www.codewars.com/kata/5590961e6620c0825000008f/train/javascript
+
+function swap(str){
+  let s = '';
+  for(let i = 0; i < str.length; i++){
+    if(str[i] === str[i].toLowerCase()) s = s + str[i].toUpperCase();
+    else s = s + str[i].toLowerCase();
+  }
+  return s;
+}
