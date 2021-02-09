@@ -1,0 +1,19 @@
+// Tally it up
+// https://www.codewars.com/kata/5630d1747935943168000013/train/javascript
+
+let scoreToTally = function(score){
+  let obj =  {  
+      1: 'a',
+      2: 'b',
+      3: 'c',
+      4: 'd',
+      5: 'e <br>',
+      }
+  return score <= 5 ? obj[score]: obj[5].repeat(Math.floor(score / 5)) + (score % 5 !== 0 ? obj[score % 5] : '');
+}
+
+
+let scoreToTally = function(score){
+  let arr = ['', 'a', 'b', 'c', 'd', 'e <br>'];
+  return score <= 5 ? arr[score]: arr[5].repeat(Math.floor(score / 5)) + arr[score % 5];
+}
