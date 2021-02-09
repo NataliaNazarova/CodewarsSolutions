@@ -1,0 +1,20 @@
+// Count cubes in a Menger Sponge
+// https://www.codewars.com/kata/59d28768a25c8c51a6000057/train/javascript
+
+function calc_ms(n) {
+  let p = 1;
+  for(let i = 1; i <= n; i++){
+    p = p * 20;
+  }
+  return p;
+}
+
+
+function calc_ms(n) {
+  return Math.pow(20, n);
+}
+
+
+function calc_ms(n) {
+  return Math.pow((3 ** 3 - 7), n);
+}
