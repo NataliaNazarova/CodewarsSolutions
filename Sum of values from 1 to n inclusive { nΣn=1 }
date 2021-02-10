@@ -1,0 +1,15 @@
+// Sum of values from 1 to n inclusive { nΣn=1 }
+// https://www.codewars.com/kata/578a55517c77f535a8000064/train/javascript
+
+function total(num){
+  let sum = 0;
+  for(let i = 0; i <= num; i++){
+    sum = sum + i;
+  }
+  return sum;
+}
+
+
+function total(n){
+  return (1 + n) * n / 2;
+}
