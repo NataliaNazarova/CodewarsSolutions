@@ -1,0 +1,12 @@
+// Move 10
+// https://www.codewars.com/kata/57cf50a7eca2603de0000090/train/javascript
+
+function moveTen(s){
+  let a = 'abcdefghijklmnopqrstuvwxyz';
+  let str = '';
+  for (let i = 0; i < s.length; i++){
+    let ind = (a.indexOf(s[i]) + 10) % a.length;
+    str = str + a[ind];
+  }
+  return str;
+}
