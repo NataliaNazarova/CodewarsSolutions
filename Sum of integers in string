@@ -1,0 +1,15 @@
+// Sum of integers in string
+// https://www.codewars.com/kata/598f76a44f613e0e0b000026/train/javascript
+
+function sumOfIntegersInString(s){
+  let sum = 0;
+  let num = '';
+  for(let i = 0; i < s.length; i++){
+    if(isNaN(+s[i]) === false) num+=s[i];
+    else if(num.length > 0) {
+          sum = sum + Number(num);
+          num = '';
+      }
+  }
+  return num.length > 0 ? sum + +num : sum;
+}
