@@ -2,6 +2,16 @@
 // https://www.codewars.com/kata/55c098aa8468f3b9030000f1/train/javascript
 
 function move_zeros(arrNum, isRight){
+  let arr1 = [];
+  let arr2 = [];
+  for(let el of arrNum){
+    if(el === 0) arr2.push(el);
+    else arr1.push(el);
+  }
+  return isRight == false ? arr2.concat(arr1): arr1.concat(arr2);
+}
+
+function move_zeros(arrNum, isRight){
   let s = 0;
   let arr = [];
   for(let el of arrNum){
