@@ -1,6 +1,17 @@
 // Determine the date by the day number
 // https://www.codewars.com/kata/602afedfd4a64d0008eb4e6e/train/javascript
 
+function getDay(day, f) {
+  if (day > 365 + f) return "wrong day";
+  let a = [31, 28 + f, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  const m = "January February March April May June July August September October November December".split(" ");
+  for (let i = 0; i < a.length; i++) {
+    if (day <= a[i]) return `${m[i]}, ${day}`;
+    day -= a[i];
+  }
+}
+
+
 function getDay(day, isLeap){
   let year = [['January', 31], ['February', 28], ['March', 31], ['April', 30], ['May', 31], ['June', 30], ['July', 31], ['August', 31], ['September', 30], ['October', 31], ['November', 30], ['December', 31]];
   let yearV = [['January', 31], ['February', 29], ['March', 31], ['April', 30], ['May', 31], ['June', 30], ['July', 31], ['August', 31], ['September', 30], ['October', 31], ['November', 30], ['December', 31]];
