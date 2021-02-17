@@ -1,0 +1,17 @@
+// Move Zeros
+// https://www.codewars.com/kata/55c098aa8468f3b9030000f1/train/javascript
+
+function move_zeros(arrNum, isRight){
+  let s = 0;
+  let arr = [];
+  for(let el of arrNum){
+    if(el === 0) s++;
+    else arr.push(el);
+  }
+  for(let i = 0; i < s; i++){
+    if(isRight === false) arr.unshift(0);
+    else arr.push(0);
+  }
+  return  arr;
+}
+
