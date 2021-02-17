@@ -1,0 +1,6 @@
+// MOD 256 without the MOD operator
+// https://www.codewars.com/kata/581e1d083a4820eb4f00004f/train/javascript
+
+function mod256WithoutMod(number){
+  return number - Math.trunc(number / 256) * 256;
+}
