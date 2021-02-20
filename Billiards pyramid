@@ -1,0 +1,21 @@
+//Billiards pyramid
+//https://www.codewars.com/kata/5bb3e299484fcd5dbb002912/solutions/javascript
+
+function pyramid(balls) {
+  let level = 0;
+  for(let i = 1; balls > 0; i++){
+    balls = balls - i;
+    if(balls >=0) level++;
+  }
+  return level;
+}
+
+
+function pyramid(balls) {
+  let level = 0;
+  while(balls > 0){
+   level++;
+   balls = balls - level;
+  }
+  return balls >= 0 ? level : level - 1;
+}
