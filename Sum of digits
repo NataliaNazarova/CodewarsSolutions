@@ -1,0 +1,14 @@
+// Sum of digits
+// https://www.codewars.com/kata/59cf805aaeb28438fe00001c/train/javascript
+
+function sum(digits) {
+  if (typeof digits === "undefined") return '';
+  else { 
+    if(typeof digits === 'number') digits = digits + '';
+    let str = digits[0];
+    for(let i = 1; i < digits.length; i++){
+      str = str + ' + ' + digits[i];
+    }
+    return str + ' = ' + digits.split("").reduce((a, b) => +a + +b);
+  }
+}
