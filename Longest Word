@@ -1,0 +1,13 @@
+// Longest Word
+// https://www.codewars.com/kata/59e2877fe155cf834a00019e/train/javascript
+
+function theLongest(text){
+  return text.split(' ').sort((a, b) => b.length - a.length)[0];
+}
+
+function theLongest(text){
+  let arr = text.split(' ');
+  let a = arr.map(el => el.length);
+  let ind = a.indexOf(Math.max(...a));
+  return arr[ind];
+}
