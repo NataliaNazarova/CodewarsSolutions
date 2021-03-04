@@ -1,0 +1,18 @@
+// Number Format
+// https://www.codewars.com/kata/565c4e1303a0a006d7000127/train/javascript
+
+let numberFormat = function (number) {
+  let n = number + '';
+  let str = '';
+  let count = 0;
+  for (let i = n.length - 1; i > 0; i--){
+    if(count < 2) {
+      count++;
+      str = n[i] + str;
+    } else {
+      count = 0;
+      str = ',' + n[i] + str;
+    }
+  }
+  return n[0] === '-' && str[0] == ',' ? n[0] + str.slice(1): n[0] + str;
+}
