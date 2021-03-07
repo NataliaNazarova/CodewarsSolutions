@@ -1,0 +1,13 @@
+// Simple validation of a username with regex
+// https://www.codewars.com/kata/56a3f08aa9a6cc9b75000023/train/javascript
+
+function validateUsr(username) {
+  if(username.length < 4 || username.length > 17) return false;
+  let count = 0;
+  for(let el of username){
+    if(el.charCodeAt() >= 97 && el.charCodeAt() <=122
+       || el.charCodeAt() >= 48 && el.charCodeAt() <=57
+       || el.charCodeAt() == 95) count++;
+  }
+  return username.length === count;
+}
