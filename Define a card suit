@@ -1,0 +1,11 @@
+// Define a card suit
+// https://www.codewars.com/kata/5a360620f28b82a711000047/train/javascript
+
+function defineSuit(card) {
+  let arr = ['♣', '♠', '♦', '♥'];
+  let suit = ['clubs', 'spades', 'diamonds', 'hearts'];
+  for(let i = 0; i < arr.length; i++){
+    if(card[card.length - 1] === arr[i]) return suit[i];
+  }
+}
+
