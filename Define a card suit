@@ -9,3 +9,12 @@ function defineSuit(card) {
   }
 }
 
+function defineSuit(card) {
+  let obj = {
+    "♣": "clubs",
+    "♠": "spades",
+    "♦": "diamonds",
+    "♥" : "hearts"
+  }
+  return obj[card.slice(-1)];
+}
