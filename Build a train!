@@ -1,0 +1,8 @@
+// Build a train!
+// https://www.codewars.com/kata/60398a8c64b9d5000d84f6a9/train/javascript
+
+function train(s) {
+  let obj = {"A": 15, "B": 10, "C": 7, "D": 8}
+  let coaches = 0;
+  return obj[s[0]] + (s.length -1) * 5;
+}
