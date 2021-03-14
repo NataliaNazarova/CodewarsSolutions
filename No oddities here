@@ -8,3 +8,11 @@ function noOdds( values ){
   }
   return arr;
 }
+
+function noOdds( values ){
+  let arr = [];
+  for(let el of values){
+    if(!(el % 2)) arr.push(el);
+  }
+  return arr;
+}
