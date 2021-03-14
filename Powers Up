@@ -1,0 +1,10 @@
+// Powers Up
+// https://www.codewars.com/kata/6001f1b46aad3700080d20a7/train/javascript
+
+function powersUp(number, upTo) {
+  let sum = 0;
+  for(let i = 1; i <= upTo; i++){
+    sum += Math.pow(number, i);
+  }
+  return sum;
+}
