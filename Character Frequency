@@ -1,0 +1,11 @@
+// Character Frequency
+// https://www.codewars.com/kata/548ef5b7f33a646ea50000b2/train/javascript
+
+function charFreq(message) {
+  let obj = {};
+  for(let i = 0; i < message.length; i++){
+    if(obj[message[i]]) obj[message[i]]++;
+    else obj[message[i]] = 1;
+  }
+  return obj;
+}
