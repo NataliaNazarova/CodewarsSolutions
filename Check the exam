@@ -1,0 +1,12 @@
+// Check the exam
+// https://www.codewars.com/kata/5a3dd29055519e23ec000074/train/javascript
+
+function checkExam(array1, array2) {
+  let mark = 0;
+  for(let i = 0; i < array2.length; i++){
+    if(array2[i].length === 0) continue;
+    else if(array1[i] == array2[i]) mark = mark + 4;
+    else mark = mark - 1;
+  }
+  return mark < 0 ? 0: mark;
+}
