@@ -1,0 +1,16 @@
+// Christmas baubles on the tree
+// https://www.codewars.com/kata/5856c5f7f37aeceaa100008e/train/javascript
+
+function baublesOnTree(baubles, branches){
+  if (branches == 0) return 'Grandma, we will have to buy a Christmas tree first!';
+  else {
+    let b1 = Math.trunc(baubles / branches);
+    let b2 = baubles % branches;
+    let arr = [];
+    for(let i = 1; i <= branches; i++){
+      if(b2) {arr.push((b1 + 1)); b2--;}
+      else arr.push(b1)
+    }
+    return arr;
+  }
+}
