@@ -14,3 +14,16 @@ function baublesOnTree(baubles, branches){
     return arr;
   }
 }
+
+function baublesOnTree(baubles, branches){
+  let arr = [];
+  if(!branches) return 'Grandma, we will have to buy a Christmas tree first!';
+  let count1 = Math.floor(baubles / branches);
+  let count2 = baubles % branches;
+  while(branches > 0){
+    arr.push(count1 + (count2 > 0 ? 1: 0));
+    branches--;
+    count2--;
+  }
+    return arr;
+}
