@@ -1,0 +1,18 @@
+// Shifter words
+// https://www.codewars.com/kata/603b2bb1c7646d000f900083/train/javascript
+
+function shifter(s){
+  if(!s.length) return 0;
+  let arr1 = s.toUpperCase().split(" ");
+  let arr = arr1.filter((el, i) => i === arr1.indexOf(el));
+  let letters = ['H', 'I', 'N', 'O', 'S', 'X', 'Z', 'M', 'W'];
+  let count = 0;
+  for(let el of arr){
+    let n = 0;
+    for(let i = 0; i< el.length; i++){
+        if(letters.includes(el[i])) n++;
+    }
+    if(n === el.length) count++;
+  } 
+  return count;
+}
