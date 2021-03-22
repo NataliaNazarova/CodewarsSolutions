@@ -1,0 +1,14 @@
+// T.T.T.17: Split odd and even
+// https://www.codewars.com/kata/57a2ab1abb994466910003af/train/javascript
+
+function splitOddAndEven(n) {
+  let arr = [];
+  let str = String(n);
+  let s = str[0];
+  for(let i = 1; i < str.length; i++){
+    if(+str[i] % 2 && +str[i-1] % 2 || !(+str[i] % 2) && !(+str[i-1] % 2)) s = s + str[i];
+    else {arr.push(+s); s = str[i]}
+  } 
+  arr.push(+s)
+  return arr;
+}
