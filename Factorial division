@@ -1,0 +1,10 @@
+//Factorial division
+// https://www.codewars.com/kata/52f3a8e1f85fadcdf7001e31/train/javascript
+
+function factorialDivision(n, d) {
+  let res = 1;
+  for (let i = d + 1; i <= n; i++){
+    res = res * i;
+  }
+  return res;
+}
