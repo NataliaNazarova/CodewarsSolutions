@@ -1,0 +1,11 @@
+// Pack Some Chocolates
+// https://www.codewars.com/kata/5f5daf1a209a64001183af9b/train/javascript
+
+function makeChocolates(small, big, goal) {
+  for (let s = 0; s <= small; s++) {
+    for (let b = 0; b <= big; b++) {
+      if (5 * b + 2 * s === goal) return s;
+    }
+  }
+  return -1;
+}
