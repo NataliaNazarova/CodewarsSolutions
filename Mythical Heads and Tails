@@ -1,0 +1,19 @@
+// Mythical Heads and Tails
+// https://www.codewars.com/kata/5751aa92f2dac7695d000fb0/train/javascript
+
+function beasts(heads, tails){
+  if (tails === 0 && heads === 0) return [0, 0];
+  else if (tails >= heads) return "No solutions";
+  let countHydra = (heads - (tails * 2)) / 3;
+  let countOrthus = tails - countHydra;
+  return countOrthus % 1 || countHydra % 1 || countOrthus < 0 || countHydra < 0 ? "No solutions" : [countOrthus, countHydra];
+}
+
+function beasts(heads, tails){
+  for (let ort = 0; ort <= tails; ort++){
+    for (let hyd = 0; hyd <= tails; hyd++) {
+      if (2 * ort + 5 * hyd === heads && ort + hyd === tails) return [ort, hyd];
+    }
+  }
+  return "No solutions";
+}
