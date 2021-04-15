@@ -1,0 +1,15 @@
+// Multiples By Permutations II
+// https://www.codewars.com/kata/5ba178be875de960a6000187/train/javascript
+
+function findLowestInt(k1) {
+  let k2 = k1 + 1;
+  let i = 1;
+  let res1 = k1 * i;
+  let res2 = k2 * i;
+  while (res1 !== res2) {
+    i++;
+    res1 = String(k1 * i).split('').sort().join('');
+    res2 = String(k2 * i).split('').sort().join('');
+  }
+  return i;
+}
