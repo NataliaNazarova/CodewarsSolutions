@@ -1,0 +1,14 @@
+// Simple Change Machine
+// https://www.codewars.com/kata/57238766214e4b04b8000011/train/javascript
+
+function changeMe(moneyIn){
+  let arr = ["£5", "£2", "£1", "20p", "50p"];
+  let money = 0;
+  if(arr.includes(moneyIn) === false) return moneyIn;
+  if (moneyIn === '20p') return "10p 10p"
+  if(moneyIn.length === 2) money = (+moneyIn[1]) * 100;
+  else money = +moneyIn.slice(0, 2);
+  let count20 = Math.floor(money / 20);
+  let count10 = money % 20 ? 1 : 0;
+  return `${'20p '.repeat(count20)}${'10p'.repeat(count10)}`.trim();
+}
