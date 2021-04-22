@@ -1,0 +1,6 @@
+// Javascript filter - 2
+// https://www.codewars.com/kata/5262fa26875ed24a3e000029/train/javascript
+
+function roomMates( rooms, floor ){
+  return rooms.filter((el, i) => i >= (floor - 1) * 6 && i < floor * 6 && el.length > 0);
+}
