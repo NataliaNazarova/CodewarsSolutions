@@ -1,0 +1,6 @@
+// Drone Fly-By
+// https://www.codewars.com/kata/58356a94f8358058f30004b5/train/javascript
+
+function flyBy(lamps, drone){
+  return lamps.length <= drone.length ? 'o'.repeat(lamps.length): 'o'.repeat(drone.length) + lamps.slice(drone.length);
+}
