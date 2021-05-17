@@ -4,3 +4,7 @@
 function wordSearch(word, text){
   return text.replace(',', '').split(' ').includes(word);
 }
+
+function wordSearch(word, text){
+  return text.match(`\\b${word}\\b`) !== null;
+}
