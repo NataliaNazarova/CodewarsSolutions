@@ -8,3 +8,8 @@ function totalBill(str) {
   }
   return Math.floor(s / 5) * 4 * 2 + s % 5 * 2;
 }
+
+function totalBill(str) {
+  str = str.replace(/ /g, '');
+  return Math.floor(str.length / 5) * 4 * 2 + str.length % 5 * 2;
+}
