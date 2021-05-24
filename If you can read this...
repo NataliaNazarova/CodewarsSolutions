@@ -1,0 +1,12 @@
+// If you can read this...
+// https://www.codewars.com/kata/586538146b56991861000293/train/javascript
+
+function to_nato(words) {
+  let arr = words.toLowerCase().replace(/\s/g, '')
+  let code = '';
+  for (let el of arr){
+    if (el in NATO) code += NATO[el] + ' ';
+    else code += el + ' ';
+  }
+  return code.trim();
+}
